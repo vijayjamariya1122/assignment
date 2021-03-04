@@ -1,0 +1,305 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 nopadding">
+
+       <div class="formslug">
+        <div class="container">
+          <div class="row">
+          <div class="col-md-12">
+           <div class="logo">
+            <span class="logofirsttext">F</span><span class="logosecondtext">i</span>l<span class="logohirdtext">e</span><span class="logofourthtext">d</span>
+           </div>
+           </div>
+           <div class="col-md-6 showgifslug">
+            <div class="text">
+              Book a Demo today and
+            </div>
+            <div class="text">
+              get two weeks for <span class="logosecondtext"> free. </span> Why?
+            </div>
+            <div class="textsecond">
+              Because Our AI - Powered Software <br>
+              Will Exceed Your Marketing Goals.
+            </div>
+            <div class="gifslug">
+              <img src="../assets/images/gifimage.webp">
+            </div>
+           </div>
+           <div class="col-md-6 nonopadding">
+            <div class="innerformslug">
+            <form [formGroup]="freetrialform" (ngSubmit)="onSubmit()">
+              <div class="firstform" *ngIf="showfirstform">
+                <div class="firstformtext">
+                  Let's Start
+                </div>
+                <div class="firstformsecondtext">
+                  Fill out the form and we'll get in touch to 
+                  get your trial set up.
+                </div>
+                <div class="radioslug">
+                  <div for="radiobutton" class="radiobutton"> Do you want to make ads that convert? </div>
+                  <div class="radio">
+                  <input 
+                  type="radio" 
+                  id="yes" 
+                  name="radiobutton" 
+                  value="yes"
+                  formControlName="radiobutton"> Yes
+                  <!-- <label for="yes">Yes</label> -->
+                  <input 
+                  type="radio" 
+                  id="no" 
+                  name="radiobutton"
+                   value="no"
+                   formControlName="radiobutton"> No
+                  <!-- <label for="no">No</label> -->
+                  
+                  </div>
+                </div>
+                <div class="selectbudgestslug">
+                  <label> What's your monthly ad budget? </label>
+                  <ng-select
+                  [items]="budget"
+                  [multiple]="false" 
+                  bindLabel="name" 
+                  bindValue="id"
+                  formControlName="selectbudget"
+                  >
+                  </ng-select>
+                  <span class="help-block" *ngIf="!freetrialform.get('selectbudget').valid && freetrialform.get('selectbudget').touched"> Select Budget </span>
+                </div>
+                <div class="buttonslug">
+                <button 
+                class="btn btn-secondary strated btn-sm" 
+                (click)="gotoSecondForm()" 
+                type="button"
+                [disabled]="!freetrialform.get('selectbudget').valid"> GET STARTED </button>
+                </div>
+              </div>
+              <div class="secondform" *ngIf="showsecondform">
+                <div class="secondformtext">
+                    We'll be in touch to get your trail set up.
+                </div>
+                <div class="secondformsecondtext">Fill Out form</div>
+                <div class="row">
+                  <div class="col-6 col-md-6">
+                  <div class="form-group">
+                    <input 
+                    class="form-control" 
+                    placeholder="First Name *"
+                    name="firstname"
+                    formControlName="firstname"
+                    >
+                    <!-- <span class="help-block" *ngIf="!freetrialform.get('firstname').valid && freetrialform.get('firstname').touched"> Enter Firstname</span> -->
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-6">
+                  <div class="form-group">
+                    <input 
+                    class="form-control" 
+                    placeholder="Last Name *"
+                    name="lastname"
+                    formControlName="lastname">
+                     <!-- <span class="help-block" *ngIf="!freetrialform.get('lastname').valid && freetrialform.get('lastname').touched"> Enter Lastname</span> -->
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                  <div class="form-group">
+                  <input
+                   class="form-control" 
+                   placeholder="Work Email *"
+                   name="email"
+                   formControlName="email">
+                   <!-- <span class="help-block" *ngIf="!freetrialform.get('email').valid && freetrialform.get('email').touched"> Enter Email</span> -->
+                   </div>
+                  </div>
+                  <div class="col-md-12">
+                  <div class="form-group">
+                  <input 
+                  class="form-control" 
+                  placeholder="Monthly advertising budget *"
+                  name="enterbudget"
+                  formControlName="enterbudget">
+                  <!-- <span class="help-block" *ngIf="!freetrialform.get('enterbudget').valid && freetrialform.get('enterbudget').touched"> Enter Budget</span> -->
+                  </div>
+                  </div>
+                  <div class="col-md-12">
+                  <div class="form-group">
+                  <input
+                   class="form-control"
+                    placeholder="Phone Number *"
+                    name="phoneno"
+                    formControlName="phoneno">
+                    <!-- <span class="help-block" *ngIf="!freetrialform.get('phoneno').valid && freetrialform.get('phoneno').touched"> Enter Phone Number</span> -->
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                  <ng-select
+                  [items]="cities"
+                  [multiple]="false" 
+                  bindLabel="name" 
+                  bindValue="id"
+                  placeholder="Select City *"
+                  formControlName="city"
+                  >
+                  </ng-select>
+                  <!-- <span class="help-block" *ngIf="!freetrialform.get('city').valid && freetrialform.get('city').touched"> Select City</span> -->
+                  </div>
+                  <!-- <span class="help-block" *ngIf="!freetrialform.get('city').valid && freetrialform.get('city').touched || !freetrialform.get('phoneno').valid && freetrialform.get('phoneno').touched ||
+                  !freetrialform.get('enterbudget').valid && freetrialform.get('enterbudget').touched || !freetrialform.get('email').valid && freetrialform.get('email').touched ||
+                  !freetrialform.get('lastname').valid && freetrialform.get('lastname').touched && !freetrialform.get('firstname').valid && freetrialform.get('firstname').touched"> Please Provide All Requirments.</span> -->
+                  <div class="col-md-12">
+                    <div class="buttonslug">
+                <button 
+                class="btn btn-secondary strated btn-sm" 
+                type="submit"
+                [disabled]="!freetrialform.get('city').valid && !freetrialform.get('phoneno').valid && !freetrialform.get('enterbudget').valid && !freetrialform.get('email').valid && !freetrialform.get('lastname').valid && !freetrialform.get('firstname').valid"> GET FREE TRIAL </button>
+                </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </form>  
+            </div>
+           </div>
+          </div>  
+        </div>  
+      </div>   
+
+      <div class="benefitslug">
+        <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mainfont">
+              The <span class="mainfontspan"> Benefits </span> Of Using Filed
+            </div>  
+          </div> 
+          <div class="col-md-6">
+              <ul >
+                <li class="ulfont"> <i class="fa fa-check facolor" aria-hidden="true"></i> &nbsp; &nbsp; Ability To Scale using dexter.our AI-powered marketing genius. </li>
+                <li class="ulfont"> <i class="fa fa-check facolor" aria-hidden="true"></i> &nbsp; &nbsp; Client Success Manager who Will Optimize your facebook Ad.   </li>
+                <li class="ulfont"> <i class="fa fa-check facolor" aria-hidden="true"></i> &nbsp; &nbsp; This Is Limited Time Offer Only. </li>
+              </ul>  
+          </div>  
+        </div>
+        </div>  
+      </div>  
+      
+      <div class="testislug">
+        <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="cardheader">
+                  <i class="fa fa-thumbs-o-up fa-5x" aria-hidden="true"></i> 
+                  <span class="cardhead">"it surpassed Our expactation."</span>
+              </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">"Filed Has Completely Surpassed our expactation.I will refer Everyone i Known.Filed Is Worth more Than i paid. "</p>
+              </div>
+              <div class="card-body">
+                 <div class="row">
+                   <div class="col-6 col-md-6">
+                     <img class="rounded-circle" src="../assets/images/job1.jpg" width="100%"> 
+                   </div>
+                   <div class="col-6 col-md-6">
+                     <div class="imgfont">
+                      Tom Y. <br>
+                      manager @ Loreal lipsum
+                    </div>
+                      
+                   </div> 
+                 </div> 
+              </div>  
+            </div>  
+          </div>  
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="cardheader">
+                  <i class="fa fa-thumbs-o-up fa-5x" aria-hidden="true"></i> 
+                  <span class="cardhead">"The Essential Marketing tool."</span>
+              </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">"Filed Has Completely Surpassed our expactation.I will refer Everyone i Known.Filed Is Worth more Than i paid. "</p>
+              </div>
+              <div class="card-body">
+                 <div class="row">
+                   <div class="col-6 col-md-6">
+                     <img class="rounded-circle" src="../assets/images/job2.jpg" width="100%"> 
+                   </div>
+                   <div class="col-6 col-md-6">
+                     <div class="imgfont">
+                      Jack N. <br>
+                      manager @ Loreal lipsum
+                    </div>
+                      
+                   </div> 
+                 </div> 
+              </div>  
+            </div>  
+          </div> 
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="cardheader">
+                  <i class="fa fa-thumbs-o-up fa-5x" aria-hidden="true"></i> 
+                  <span class="cardhead">"Your company Is Truly Upstanding."</span>
+              </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">"Filed Has Completely Surpassed our expactation.I will refer Everyone i Known.Filed Is Worth more Than i paid. "</p>
+              </div>
+              <div class="card-body">
+                 <div class="row">
+                   <div class="col-6 col-md-6">
+                     <img class="rounded-circle" src="../assets/images/job3.jpg" width="100%"> 
+                   </div>
+                   <div class="col-6 col-md-6">
+                     <div class="imgfont">
+                      Tania A. <br>
+                      manager @ Loreal lipsum
+                    </div>
+                      
+                   </div> 
+                 </div> 
+              </div>  
+            </div>  
+          </div> 
+        </div>  
+       </div> 
+      </div>  
+      
+     <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div> copyright @ 2020. All Right Reserved </div>
+          </div> 
+           <div class="col-md-6">
+            <div class="mainslug">
+              <div class="subslug"> HOME </div>
+              <div class="subslug"> FEATURES </div>
+              <div class="subslug"> TERMS </div>
+              <div class="subslug"> PRIVACY </div>
+              <div class="subslug"> CONTACT US </div>
+            </div>  
+          </div>
+          <div class="col-md-2">
+            <div class="mainslug">
+            <i class="fa fa-facebook subslug"> </i>
+            <i class="fa fa-instagram subslug"> </i>
+            <i class="fa fa-twitter subslug"> </i>
+            </div>
+          </div>  
+        </div>  
+      </div>
+     </footer> 
+   
+    </div>  
+  </div> 
+</div>
+

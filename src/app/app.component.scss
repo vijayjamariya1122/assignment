@@ -1,0 +1,326 @@
+.nopadding
+    {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+.help-block
+{
+    color: red;
+}    
+
+input.ng-invalid.ng-touched, ng-select.ng-invalid.ng-touched
+{
+    border: 1px solid red;
+}
+//Footer Strat
+footer
+{
+    background: gray;
+    color: white;
+    padding: 20px;
+}
+
+.mainslug
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.subslug
+{
+    cursor: pointer;
+}
+//Footer ends
+
+
+//testimony Start
+.testislug
+{
+    background: skyblue;
+    padding: 30px;
+}
+
+.card
+{
+    background: transparent;
+    color: white;
+    border: transparent;
+}
+
+.cardhead
+{
+    vertical-align: super;
+    padding: 12px;
+    font-size: 13px;
+}
+
+.card-text
+{
+    font-size: 15px;
+}
+
+.imgfont
+{
+    font-size: 12px;
+    padding: 5px;
+}
+
+//Testimony ends
+
+//Benifts Strats
+
+.benefitslug
+{
+    padding: 30px;
+}
+
+.mainfont
+{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 60px 0px;
+}
+
+.mainfontspan
+{
+    color: skyblue;
+}
+
+.facolor
+{
+    color: skyblue;
+    font-size: 25px;
+}
+
+.ulfont
+{
+    font-size: 15px;
+}
+
+ul li
+{
+    list-style-type: none;
+    padding: 15px;
+}
+//Benifits Ends
+
+//Form slug strat
+
+.formslug
+{
+    padding: 30px;
+    background-image: url(../assets/images/image3.jpg);
+    // background: white;
+    width: 100%;
+    height: 95vh;
+}
+
+.logo
+{
+    font-size: 35px;
+    font-family: emoji;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.logofirsttext, .logohirdtext
+{
+    color: salmon;
+}
+
+.logosecondtext, .logofourthtext
+{
+    color: skyblue;
+}
+
+.text
+{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 3px 0px;
+}
+
+.textsecond
+{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+
+.gifslug img
+{
+    height: 50vh;
+    padding: 20px 0px;
+}
+
+.innerformslug
+{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 0px #888888;
+    height: 55vh;
+    width: 25vw;
+    margin: 0px 100px;
+}
+
+//firstform
+.firstformtext
+{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.firstformsecondtext
+{
+    font-size: 13px;
+    text-align: center;
+    width: 80%;
+    margin: 0px 35px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.radioslug
+{
+    padding: 0px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    display: block;
+}
+.radio
+{
+    padding: 10px;
+}
+
+.selectbudgestslug
+{
+    padding: 0px 10px;
+    font-size: 13px;
+    font-weight: 500; 
+}
+
+.btn-secondary
+{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    background: salmon;
+    border-radius: 5px;
+}
+
+.buttonslug
+{
+    padding:10px 0px;
+}
+
+//firstform ends
+//secondform
+.secondformtext
+{
+    font-size: 17px;
+    width: 78%;
+    margin: 0px 25px;
+    text-align: center;
+    font-weight: 500;
+    padding: 5px 0px;
+}
+
+.secondformsecondtext
+{
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.form-control
+{
+    height: 28px;
+
+}
+
+
+
+.secondform .row input
+{
+    margin-bottom: 15px;
+}
+//secondform ends
+
+
+//Form slug ends
+
+@media screen and (min-width: 340px) and (max-width: 850px)
+{
+    .mainslug
+    {
+        display: block;
+    }
+
+    .mainslug i
+    {
+        padding: 10px;
+    }
+
+    .testislug
+    {
+        padding: 0px;
+    }
+    .benefitslug
+    {
+        padding: 0px
+    }
+    .mainfont
+    {
+        padding: 0px 0px;
+        text-align: center;
+    }
+    ul
+    {
+        padding-inline-start: 0px;
+    }
+
+    .nopadding
+    {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .formslug
+    {
+        padding: 0px;
+    }
+
+    .nonopadding
+    {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .innerformslug
+    {
+        width: 100vw;
+        margin: 0px 0px;
+        height: auto;
+    }
+    .showgifslug
+    {
+        display: none;
+    }
+    // .logo
+    // {
+    //     display: none;
+    // }
+    .formslug
+    {
+        height: auto;
+        padding: 20px 0px;
+    }
+
+
+
+}
